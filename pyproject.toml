@@ -1,8 +1,13 @@
 [tool.poetry]
 name = "rlacalc"
-version = "0.1.0"
+version = "0.2.0"
 description = ""
 authors = ["Neal McBurnett <neal@mcburnett.org>"]
+
+packages = [
+    { include = "rlacalc", from = "src" },
+    { include = "hug_noop.py", from = "src" },
+]
 
 [tool.poetry.dependencies]
 python = "^3.8"

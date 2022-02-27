@@ -3,6 +3,21 @@ name = "rlacalc"
 version = "0.3.0"
 description = "Statistical calculations for risk-limiting election tabulation audits (RLAs)"
 authors = ["Neal McBurnett <neal@mcburnett.org>"]
+license="MIT"
+readme="README.md"
+homepage="http://bcn.boulder.co.us/~neal/electionaudits/rlacalc.html"
+repository="https://github.com/nealmcb/rlacalc"
+keywords=["RLA", "risk-limiting audit", "election", "audit"]
+classifiers=[
+	"Development Status :: 5 - Production/Stable",
+	"Environment :: Console",
+	"Environment :: Web Environment",
+	"Intended Audience :: Developers",
+	"Intended Audience :: Science/Research",
+	"Natural Language :: English",
+	"Topic :: Security",
+	"Topic :: Scientific/Engineering :: Mathematics",
+]
 
 packages = [
     { include = "rlacalc", from = "src" },

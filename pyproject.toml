@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "rlacalc"
-version = "0.2.0"
-description = ""
+version = "0.3.0"
+description = "Statistical calculations for risk-limiting election tabulation audits (RLAs)"
 authors = ["Neal McBurnett <neal@mcburnett.org>"]
 
 packages = [
@@ -14,6 +14,9 @@ python = "^3.8"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
+
+[tool.poetry.scripts]
+rlacalc = "rlacalc:main"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

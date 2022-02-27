@@ -51,6 +51,11 @@ Run unit tests:
  rlacalc.py --test
 
 TODO:
+ Fix doctesting for Python 3. Code is outputing integers when floats are expected as in Python 2.
+ Get --test working with rlacalc command. Until then run via __init__.py --test
+
+ Allow entry of info on invalid ballots, e.g. via ballot counts for winner, loser and total.
+    ala opts used in athena like -b 1880 1509 -t 3503
  check hug parameters, test more
  check command line calling sequences and printouts
  use different names if I change parameter order
@@ -60,9 +65,10 @@ TODO:
  test multi-times thru loop
 
  Model variance for ballot-polling audits, add estimates for quantiles.
- Add calculations for DiffSum, ClipAudit etc.
+ Add calculations for Minerva, DiffSum, ClipAudit etc.
  Add pretty API documentation via pydoc3 and json2html
    (https://github.com/timothycrosley/hug/issues/448#issuecomment-281878767)
+ Accept CLI arguments for --binom rather than hard-coded values
 """
 
 from __future__ import (absolute_import, division,
@@ -92,7 +98,7 @@ def annotate(annotations):
     return decorator
 
 __author__ = "Neal McBurnett <http://neal.mcburnett.org/>"
-__version__ = "0.2.0"
+__version__ = "0.3.0"
 __date__ = "2017-02-23"
 __copyright__ = "Copyright (c) 2017 Neal McBurnett"
 __license__ = "MIT"
@@ -141,7 +147,7 @@ parser.add_option("-r", "--alpha",
 
 parser.add_option("-g", "--gamma",
   type="float", default=1.03905,
-  help="gamma: error inflation factor, greater than 1.0")
+  help="gamma: error inflation factor, greater than 1.0. default=1.03905")
 
 parser.add_option("-s", "--samplesize",
   type="int", default=95,
@@ -819,8 +825,8 @@ def _test(opts):
     return doctest.testmod(verbose=opts.verbose)
 
 
-def main(parser):
-    "Run rlacalc with given OptionParser arguments"
+def main():
+    "Command-line interface for rlacalc"
 
     (opts, args) = parser.parse_args()
 
@@ -882,4 +888,4 @@ def main(parser):
 
 
 if __name__ == "__main__":
-    main(parser)
+    main()

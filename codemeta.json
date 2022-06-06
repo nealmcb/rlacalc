@@ -1,0 +1,33 @@
+{
+    "@context": [
+        "https://raw.githubusercontent.com/codemeta/codemeta/2.0/codemeta.jsonld",
+        "https://raw.githubusercontent.com/schemaorg/schemaorg/main/data/releases/13.0/schemaorgcontext.jsonld",
+        "https://w3id.org/software-types"
+    ],
+    "@id": "/rlacalc",
+    "@type": "SoftwareSourceCode",
+    "author": {
+        "@id": "/person/neal-mcburnett",
+        "@type": "Person",
+        "email": "neal@mcburnett.org",
+        "familyName": "McBurnett",
+        "givenName": "Neal"
+    },
+    "description": "",
+    "identifier": "rlacalc",
+    "name": "rlacalc",
+    "runtimePlatform": [
+        "Python 3",
+        "Python 3.10",
+        "Python 3.8",
+        "Python 3.9"
+    ],
+    "targetProduct": {
+        "@id": "/commandlineapplication/rlacalc",
+        "@type": "CommandLineApplication",
+        "executableName": "rlacalc",
+        "name": "rlacalc",
+        "runtimePlatform": "Python 3"
+    },
+    "version": "0.3.0"
+}

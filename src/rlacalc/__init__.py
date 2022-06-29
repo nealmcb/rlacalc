@@ -9,10 +9,10 @@ as described in:
   A Gentle Introduction to Risk-limiting Audits
    http://www.stat.berkeley.edu/~stark/Preprints/gentle12.pdf
 
-  sample-size multiplier rho as described in
-
   Super-Simple Simultaneous Single-Ballot Risk-Limiting Audits [s4rla]
    https://www.usenix.org/legacy/events/evtwote10/tech/full_papers/Stark.pdf
+
+  sample-size multiplier rho as described on page 4 of s4rla
 
   BRAVO: Ballot-polling Risk-limiting Audits to Verify Outcomes
    Mark Lindeman, Philip B. Stark, Vincent S. Yates
@@ -63,6 +63,10 @@ TODO:
  make "Note, can be less than nmin" example into test case
  more p-value tests
  test multi-times thru loop
+
+ Make lambdatol a command-line parameter and incorporate rho() into nmin()
+  Currently assumes lambda = 50% (leading to hardcoded 2.0 *gamma in nmin now)
+ Provide a command line option to calculate rho
 
  Model variance for ballot-polling audits, add estimates for quantiles.
  Add calculations for Minerva, DiffSum, ClipAudit etc.

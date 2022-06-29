@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "rlacalc"
-version = "0.3.0"
+version = "0.4.0"
 description = "Statistical calculations for risk-limiting election tabulation audits (RLAs)"
 authors = ["Neal McBurnett <neal@mcburnett.org>"]
 license="MIT"

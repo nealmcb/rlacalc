@@ -28,7 +28,7 @@ packages = [
 python = "^3.8"
 
 [tool.poetry.dev-dependencies]
-pytest = "^5.2"
+pytest = "^7.2"
 
 [tool.poetry.scripts]
 rlacalc = "rlacalc:main"
